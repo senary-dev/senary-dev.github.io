@@ -1,11 +1,21 @@
-let links = ["about", "contact"];
+let links = [
+  { title: "about", href: "/" },
+  {
+    title: "contact",
+    href: "mailto:info@senary.dev?subject=Hi! I found you from your website!",
+  },
+];
 let ul = document.getElementsByTagName("ul")[0];
 
 function navigationLinks() {
   function createNavList(link) {
     const li = createElem("li");
+    const a = createElem("a");
     li.classList.add("flex");
-    li.textContent = link;
+    a.href = link.href;
+    a.textContent = link.title;
+    a.classList.add("hover:text-slate-300");
+    li.appendChild(a);
     ul.appendChild(li);
   }
 
@@ -13,6 +23,6 @@ function navigationLinks() {
     createNavList(link);
   });
 
-  let classes = ["flex", "gap-5", "py-4", "px-8"];
+  let classes = ["flex", "gap-8", "py-4", "px-8"];
   classnames(ul, classes);
 }
