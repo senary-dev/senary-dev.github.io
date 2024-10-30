@@ -7,15 +7,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./helpers.js" defer></script>
     <script src="./functions.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
+    body,
+    html {
+      font-family: "Instrument Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
     nav {
       align-items: center;
       color: white;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       font-size: 0.875rem;
     }
+
     nav svg {
       margin-right: auto;
       height: 72px;
@@ -30,9 +46,9 @@
 
   <body
     onload="navigationLinks()"
-    class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500"
+    class="h-14 bg-gradient-to-r from-sky-500 to-indigo-600"
   >
-    <nav class="flex px-4 py-2 lg:max-w-screen-2xl lg:m-auto lg:px-8 lg:py-4">
+    <nav class="flex px-4 py-2 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4">
       <svg id="ART" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
         <defs>
           <style>
@@ -68,7 +84,7 @@
     <section
       class="text-white flex flex-col justify-center items-center text-center lg:text-left"
     >
-      <h1 class="p-16 text-4xl font-bold">Senary Web Developers</h1>
+      <h1 class="pb-8 mt-16 text-4xl font-bold">Senary Web Developers</h1>
       <p class="text-xl">
         Our page is currently under construction. Please visit us later! Thanks!
       </p>
