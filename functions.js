@@ -1,7 +1,7 @@
 let links = [
   { title: "about", href: "/" },
   {
-    title: "contact",
+    title: "contact us",
     href: "mailto:info@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>",
   },
 ];
