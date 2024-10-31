@@ -26,3 +26,35 @@ function navigationLinks() {
   let classes = ["flex", "gap-8", "py-4", "px-8"];
   classnames(ul, classes);
 }
+
+function onClick() {
+  let hero = document.getElementById("hero");
+  let dialog = createElem("dialog");
+  let h1 = createElem("h1");
+  let button = createElem("button");
+  let form = createElem("form");
+
+  h1.textContent = "Hello, great to hear from you!";
+  button.textContent = "close me!";
+
+  form.appendChild(h1);
+  form.appendChild(button);
+
+  form.setAttribute("method", "dialog");
+  let dialogClasses = [
+    "p-16",
+    "rounded-xl",
+    "backdrop:bg-black/50",
+    "backdrop:backdrop-blur-md",
+  ];
+  classnames(dialog, dialogClasses);
+
+  dialog.appendChild(form);
+  hero.appendChild(dialog);
+
+  dialog.setAttribute("open", "");
+
+  hero.appendChild(dialog);
+
+  // alert("Button Clicked Bro!!");
+}
