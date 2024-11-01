@@ -70,9 +70,18 @@
     nav {
       align-items: center;
       color: white;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.875rem;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+
+    nav li {
+      border-radius: 0.625rem;
+      padding: 0.375rem 0.625rem;
+    }
+
+    nav li:hover {
+      background: rgba(255, 255, 255, 0.125);
     }
 
     nav svg {
@@ -134,7 +143,7 @@
       </p>
       <p class="mt-1">If you need to contact us, please inquire below</p>
       <button
-        class="bg-indigo-800 mt-8 px-10 py-3 uppercase text-xs lg:text-sm font-bold tracking-widest rounded-full hover:bg-indigo-600 hover:text-indigo-200"
+        class="bg-indigo-800 mt-8 px-10 py-3 uppercase text-xs lg:text-sm font-bold tracking-widest rounded-xl hover:bg-indigo-600 hover:text-indigo-200"
       >
         <a
           href="mailto:info@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"

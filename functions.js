@@ -23,7 +23,7 @@ function navigationLinks() {
     createNavList(link);
   });
 
-  let classes = ["flex", "gap-8", "py-4", "px-8"];
+  let classes = ["flex", "gap-4", "py-4", "px-8"];
   classnames(ul, classes);
 }
 
