@@ -4,6 +4,7 @@
     <!-- HTML Meta Tags -->
     <title>Senary LLC. - Web and mobile application development</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
     <meta
       name="description"
       content="Web and mobile applications developed with modern technology."
@@ -47,59 +48,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com" async></script>
-    <script src="./helpers.js" async></script>
-    <script src="./functions.js" async></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <style>
-    body,
-    html {
-      font-family: "Instrument Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-      font-variation-settings: "wdth" 100;
-    }
 
-    nav {
-      align-items: center;
-      color: white;
-      text-transform: capitalize;
-      letter-spacing: 1px;
-      font-size: 1rem;
-    }
-
-    nav li {
-      border-radius: 0.625rem;
-      padding: 0.375rem 0.625rem;
-    }
-
-    nav li:hover {
-      background: rgba(255, 255, 255, 0.125);
-    }
-
-    nav svg {
-      margin-right: auto;
-      height: 2rem;
-      width: 2rem;
-
-      @media (min-width: 1200px) {
-        height: 3.5rem;
-        width: 3.5rem;
-      }
-    }
-  </style>
-
-  <body
-    onload="navigationLinks()"
-    class="h-14 bg-gradient-to-r from-sky-500 to-indigo-600"
-  >
+  <body class="h-14 bg-gradient-to-r from-sky-500 to-indigo-600">
     <nav class="flex px-4 py-2 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4">
       <svg id="ART" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
         <defs>
@@ -131,7 +89,18 @@
           />
         </g>
       </svg>
-      <ul class="gap-4 px-4 py-2"></ul>
+      <ul class="px-4 py-2 flex gap-3">
+        <li class="flex">
+          <a href="/">About</a>
+        </li>
+        <li class="flex">
+          <a
+            href="mailto:info@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
+          >
+            Contact Us</a
+          >
+        </li>
+      </ul>
     </nav>
     <section
       id="hero"
@@ -143,7 +112,7 @@
       </p>
       <p class="mt-1">If you need to contact us, please inquire below</p>
       <button
-        class="bg-indigo-800 mt-8 px-10 py-3 uppercase text-xs lg:text-sm font-bold tracking-widest rounded-xl hover:bg-indigo-600 hover:text-indigo-200"
+        class="bg-indigo-800 mt-8 px-10 py-3 uppercase text-xs lg:text-sm font-bold tracking-widest rounded-xl hover:bg-indigo-900 hover:shadow-xl"
       >
         <a
           href="mailto:info@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
