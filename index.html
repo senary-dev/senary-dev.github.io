@@ -54,7 +54,9 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./functions.js"></script>
   </head>
 
   <body class="h-14 bg-gradient-to-r from-sky-500 to-indigo-600">
@@ -91,7 +93,7 @@
       </svg>
       <ul class="px-4 py-2 flex gap-3">
         <li class="flex">
-          <a href="/">About</a>
+          <a href="#" onclick="onAboutClick()">About</a>
         </li>
         <li class="flex">
           <a
@@ -104,13 +106,12 @@
     </nav>
     <section
       id="hero"
-      class="text-white flex flex-col justify-center items-center text-center lg:text-left"
+      class="text-white h-[100vh] px-6 flex flex-col justify-start items-center text-center lg:text-left"
     >
-      <h1 class="pb-8 mt-16 text-4xl font-bold">Senary Web Developers</h1>
-      <p class="text-xl">
-        Our page is currently under construction. Please visit us later! Thanks!
-      </p>
-      <p class="mt-1">If you need to contact us, please inquire below</p>
+      <h1 class="pb-8 mt-16 text-4xl lg:text-6xl font-bold">
+        What's Your Next Big App Idea?
+      </h1>
+      <p class="text-xl">Drop us a message to discuss</p>
       <button
         id="cta"
         class="bg-indigo-800 mt-8 px-10 py-3 uppercase text-xs lg:text-sm font-bold tracking-widest rounded-xl hover:bg-indigo-900 hover:shadow-xl"

@@ -58,3 +58,8 @@ function onClick() {
 
   // alert("Button Clicked Bro!!");
 }
+
+function onAboutClick() {
+  let aboutSection = document.getElementById("about");
+  aboutSection.scrollIntoView({ behavior: "smooth" });
+}
