@@ -14,7 +14,7 @@ function navigationLinks() {
     li.classList.add("flex");
     a.href = link.href;
     a.textContent = link.title;
-    a.classList.add("hover:text-slate-300");
+    // a.classList.add("hover:text-slate-300");
     li.appendChild(a);
     ul.appendChild(li);
   }
@@ -23,7 +23,7 @@ function navigationLinks() {
     createNavList(link);
   });
 
-  let classes = ["flex", "gap-8", "py-4", "px-8"];
+  let classes = ["flex", "gap-3", "py-4", "px-8"];
   classnames(ul, classes);
 }
 
@@ -57,4 +57,9 @@ function onClick() {
   hero.appendChild(dialog);
 
   // alert("Button Clicked Bro!!");
+}
+
+function onAboutClick() {
+  let aboutSection = document.getElementById("about");
+  aboutSection.scrollIntoView({ behavior: "smooth" });
 }
