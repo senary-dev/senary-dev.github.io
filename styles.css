@@ -14,13 +14,6 @@ nav {
   font-size: 1rem;
 }
 
-nav li {
-  border-radius: 0.625rem;
-  padding: 0.375rem 0.625rem;
-  transform: scale(1);
-  background: transparent;
-}
-
 nav svg {
   margin-right: auto;
   height: 2rem;
