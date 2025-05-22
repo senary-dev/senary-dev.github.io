@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="stripe.js"></script>
     <!-- HTML Meta Tags -->
     <title>Senary LLC. - Custom Web and Mobile Application Development</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -61,7 +63,7 @@
 
   <body class="h-14 bg-gradient-to-r from-sky-500 to-indigo-600">
     <nav
-      class="flex px-6 py-4 fixed top-0 right-0 left-0 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
+      class="flex px-1 py-2 md:px-6 md:py-4 fixed top-0 right-0 left-0 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
     >
       <svg
         id="ART"
@@ -99,15 +101,24 @@
           />
         </g>
       </svg>
-      <ul class="px-4 py-2 flex gap-1">
-        <li class="flex px-4 py-2 rounded-full">
+      <ul class="px-4 py-2 flex gap-4 md:gap-1 items-center ml-auto">
+        <li class="hidden md:block flex px-4 py-2 rounded-full">
           <a href="#" onclick="onAboutClick()">About</a>
         </li>
-        <li class="flex px-4 py-2 rounded-full">
+        <li
+          class="flex mr-2 lg:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
+        >
           <a
             href="mailto:inquiry@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
           >
             Contact Us</a
+          >
+        </li>
+        <li
+          class="flex mr-2 md:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
+        >
+          <a href="https://buy.stripe.com/3cI9AVcsr88N3Q35LJ3sI00">
+            Make a payment</a
           >
         </li>
       </ul>
