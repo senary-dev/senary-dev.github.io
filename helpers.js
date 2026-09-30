@@ -1,5 +1,5 @@
 function classnames(element, classes) {
-  classes.forEach((c) => element.classList.add(c));
+  classes.forEach((classname) => element.classList.add(classname));
 }
 
 function createElem(ele) {

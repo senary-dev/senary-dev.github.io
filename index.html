@@ -65,65 +65,71 @@
     <script src="./functions.js"></script>
   </head>
 
-  <body class="h-14 bg-gradient-to-r from-sky-500 to-indigo-600">
+  <body class="min-h-screen bg-gradient-to-r from-sky-500 to-indigo-600">
     <nav
-      class="flex px-1 py-2 md:px-6 md:py-4 fixed top-0 right-0 left-0 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
+      class="fixed top-0 right-0 left-0 z-50 transition-all duration-300"
     >
-      <svg
-        id="ART"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 2000 2000"
-        aria-labelledby="senary logo"
+      <div
+        class="flex px-1 py-2 md:px-6 md:py-4 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
       >
-        <defs>
-          <style>
-            .cls-1 {
-              fill: #003ec5;
-              stroke-width: 0px;
-            }
-          </style>
-        </defs>
-        <g id="Front_Bracket" data-name="Front Bracket">
-          <path
-            class="cls-1"
-            d="M1802.92,1103.81c-1.22,126.78-5.99,253.54-4.57,380.34-.55,75.51,5.74,152.78-16.65,225.88-43.68,141.26-195.66,163.63-324.89,127.29-34.21-8.98-67.69-20.88-101.02-32.71-263.64-94.58-527.77-187.94-790.2-285.69-30.5-11.33-61.1-22.42-91.6-33.77-27.86-10.46-56.78-22.2-80.88-38.54-93.56-60.65-66.83-180.87,30.3-221.67,55.98-23.35,118.27-11.38,175.5,1.52,196.71,44.3,393.24,89.35,589.94,133.2,11.61,2.29,22.82,3.98,33.18,4.48,27.12,1.64,49.7-6.11,62.5-28.45,11.29-19.53,14.53-43.71,17.52-66.54,13.08-110.31,27.09-220.6,39.11-331.02,7.89-69.05,14.63-138.3,24.56-207.1,7.07-48.12,20.86-96.84,53.66-134.2,69.26-78.56,211.76-110.77,306.7-61.1,72.17,38.98,75.46,116.1,75.31,188.52.98,126.47,3.99,252.87,1.53,379.31v.25Z"
-          />
-        </g>
-        <g id="Slash">
-          <path
-            id="Slash-2"
-            data-name="Slash"
-            class="cls-1"
-            d="M165.2,1158.05c-21.5-9.26-21.83-45.02-11.1-73.29,14.71-38.81,40.34-61.89,66.06-81.84,361.25-245.36,723.58-486.91,1085.82-728.74,32.56-21.58,64.99-43.69,97.57-65.23,46.14-30.33,94.08-57.51,144.16-64.11,25.12-2.89,53.18-1.21,74.15,20.57,11.47,11.82,19.47,31.88,18.5,53.62-1.8,34.64-17.8,60.09-35.69,81.23-19.49,22.28-41.36,38.66-63.6,53.65-384.49,233.62-770.13,462.34-1155.29,693.41-58.4,34.19-116.38,70.52-175.11,103.23-16.33,7.76-30.66,13.29-45.35,7.55l-.11-.05Z"
-          />
-        </g>
-        <g id="Back_Bracket" data-name="Back Bracket">
-          <path
-            class="cls-1"
-            d="M1030.57,282.58c25.66,4.44,43.48,24.15,33.18,50.8-18.41,44.33-87.72,76.23-132.86,85.65-17.2,3.83-34.81,6.28-52.33,8.38-104.16,11.99-208.6,21.18-312.7,33.56-15.36,2.02-31.38,5.68-44.31,13.56-23.93,14.17-34.59,39.48-46.48,64.33-5.1,10.71-10.21,21.41-15.32,32.11-21.25,44.54-42.45,89.11-63.67,133.67-17.09,34.63-31.49,71.33-54.45,102.23-21.73,28.98-60.52,62.24-98.7,59.57-20.96-1.76-34.63-18.34-33.66-39.88.51-19.37,9.87-39.57,18.74-57.25,43.39-82.77,87.04-165.37,129.42-248.7,16.96-32.29,32.15-66.31,53.93-95.68,37-51.42,93.41-65.81,152.93-74.95,133.99-21.45,267.87-43.84,401.87-65.19,20.97-3.03,43.6-6.1,64.15-2.26l.22.04Z"
-          />
-        </g>
-      </svg>
-      <ul class="px-4 py-2 flex gap-4 md:gap-1 items-center ml-auto">
-        <li class="hidden md:block flex px-4 py-2 rounded-full">
-          <a href="#" onclick="onAboutClick()">About</a>
-        </li>
-        <li
-          class="flex mr-2 lg:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
+        <svg
+          id="ART"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 2000 2000"
+          aria-labelledby="senary logo"
         >
-          <a
-            href="mailto:inquiry@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #003ec5;
+                stroke-width: 0px;
+              }
+            </style>
+          </defs>
+          <g id="Front_Bracket" data-name="Front Bracket">
+            <path
+              class="cls-1"
+              d="M1802.92,1103.81c-1.22,126.78-5.99,253.54-4.57,380.34-.55,75.51,5.74,152.78-16.65,225.88-43.68,141.26-195.66,163.63-324.89,127.29-34.21-8.98-67.69-20.88-101.02-32.71-263.64-94.58-527.77-187.94-790.2-285.69-30.5-11.33-61.1-22.42-91.6-33.77-27.86-10.46-56.78-22.2-80.88-38.54-93.56-60.65-66.83-180.87,30.3-221.67,55.98-23.35,118.27-11.38,175.5,1.52,196.71,44.3,393.24,89.35,589.94,133.2,11.61,2.29,22.82,3.98,33.18,4.48,27.12,1.64,49.7-6.11,62.5-28.45,11.29-19.53,14.53-43.71,17.52-66.54,13.08-110.31,27.09-220.6,39.11-331.02,7.89-69.05,14.63-138.3,24.56-207.1,7.07-48.12,20.86-96.84,53.66-134.2,69.26-78.56,211.76-110.77,306.7-61.1,72.17,38.98,75.46,116.1,75.31,188.52.98,126.47,3.99,252.87,1.53,379.31v.25Z"
+            />
+          </g>
+          <g id="Slash">
+            <path
+              id="Slash-2"
+              data-name="Slash"
+              class="cls-1"
+              d="M165.2,1158.05c-21.5-9.26-21.83-45.02-11.1-73.29,14.71-38.81,40.34-61.89,66.06-81.84,361.25-245.36,723.58-486.91,1085.82-728.74,32.56-21.58,64.99-43.69,97.57-65.23,46.14-30.33,94.08-57.51,144.16-64.11,25.12-2.89,53.18-1.21,74.15,20.57,11.47,11.82,19.47,31.88,18.5,53.62-1.8,34.64-17.8,60.09-35.69,81.23-19.49,22.28-41.36,38.66-63.6,53.65-384.49,233.62-770.13,462.34-1155.29,693.41-58.4,34.19-116.38,70.52-175.11,103.23-16.33,7.76-30.66,13.29-45.35,7.55l-.11-.05Z"
+            />
+          </g>
+          <g id="Back_Bracket" data-name="Back Bracket">
+            <path
+              class="cls-1"
+              d="M1030.57,282.58c25.66,4.44,43.48,24.15,33.18,50.8-18.41,44.33-87.72,76.23-132.86,85.65-17.2,3.83-34.81,6.28-52.33,8.38-104.16,11.99-208.6,21.18-312.7,33.56-15.36,2.02-31.38,5.68-44.31,13.56-23.93,14.17-34.59,39.48-46.48,64.33-5.1,10.71-10.21,21.41-15.32,32.11-21.25,44.54-42.45,89.11-63.67,133.67-17.09,34.63-31.49,71.33-54.45,102.23-21.73,28.98-60.52,62.24-98.7,59.57-20.96-1.76-34.63-18.34-33.66-39.88.51-19.37,9.87-39.57,18.74-57.25,43.39-82.77,87.04-165.37,129.42-248.7,16.96-32.29,32.15-66.31,53.93-95.68,37-51.42,93.41-65.81,152.93-74.95,133.99-21.45,267.87-43.84,401.87-65.19,20.97-3.03,43.6-6.1,64.15-2.26l.22.04Z"
+            />
+          </g>
+        </svg>
+        <ul class="px-4 py-2 flex gap-4 md:gap-1 items-center ml-auto">
+          <li class="hidden md:block flex px-4 py-2 rounded-full">
+            <a href="#" onclick="onAboutClick()">About</a>
+          </li>
+          <li
+            class="flex mr-2 lg:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
           >
-            Contact Us</a
+            <a
+              href="mailto:inquiry@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
+            >
+              Contact Us</a
+            >
+          </li>
+          <li
+            class="flex mr-2 md:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
           >
-        </li>
-        <li
-          class="flex mr-2 md:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
-        >
-          <a href="https://buy.stripe.com/3cI9AVcsr88N3Q35LJ3sI00"> Payment</a>
-        </li>
-      </ul>
+            <a href="https://buy.stripe.com/3cI9AVcsr88N3Q35LJ3sI00">
+              Payment</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <section
       id="hero"
@@ -147,10 +153,418 @@
         <img />
       </figure>
     </section>
+
+    <section id="about" class="bg-black/15 border-t border-white/10">
+      <div class="text-white px-6 py-24 lg:py-32 max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-5xl font-bold text-center mb-4">
+          What We Offer
+        </h2>
+        <p class="text-white/80 text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+          From a brand new site to a full-scale web application, we build and
+          maintain what your business needs to grow online.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <path d="M9 13l-2 2 2 2" />
+                <path d="M13 13l2 2-2 2" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Website Builds</h3>
+            <p class="text-white/80 text-sm">
+              Custom websites built from scratch and tailored to your brand,
+              from first sketch to launch.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M12 3l9 5-9 5-9-5 9-5z" />
+                <path d="M3 13l9 5 9-5" />
+                <path d="M3 17l9 5 9-5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Web Applications</h3>
+            <p class="text-white/80 text-sm">
+              Full web applications built in the React / Next.js ecosystem,
+              designed to scale with your product.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M4 4v5h5" />
+                <path d="M20 20v-5h-5" />
+                <path d="M4 9a8 8 0 0114-5" />
+                <path d="M20 15a8 8 0 01-14 5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Website Maintenance</h3>
+            <p class="text-white/80 text-sm">
+              Ongoing updates, fixes, and monitoring to keep your site
+              running smoothly.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">WordPress Maintenance</h3>
+            <p class="text-white/80 text-sm">
+              Plugin and core updates, security patches, and backups for
+              your WordPress site.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M3 17l6-6 4 4 8-8" />
+                <path d="M15 7h6v6" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Basic SEO</h3>
+            <p class="text-white/80 text-sm">
+              On-page SEO fundamentals covering metadata, structure, and
+              performance to help you get found.
+            </p>
+          </div>
+        </div>
+
+        <h3
+          class="text-xl lg:text-2xl font-bold text-center mt-20 mb-10 lg:mt-24"
+        >
+          Built With
+        </h3>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-5 gap-x-6 gap-y-10 max-w-3xl mx-auto"
+        >
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <span class="text-base font-bold">JS</span>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >JavaScript</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <span class="text-base font-bold">TS</span>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >TypeScript</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="w-7 h-7"
+              >
+                <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >React</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-7 h-7"
+              >
+                <path d="M12 2c3 4 5 8 5 12a5 5 0 01-10 0c0-4 2-8 5-12z" />
+                <path d="M12 14v7" />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >MongoDB</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+                class="w-7 h-7"
+              >
+                <polygon
+                  points="12,3 19.79,7.5 19.79,16.5 12,21 4.21,16.5 4.21,7.5"
+                />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >Node</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <span class="text-base font-bold">Ex</span>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >Express</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-7 h-7"
+              >
+                <path d="M3 9h13a3 3 0 100-6" />
+                <path d="M3 15h17a3 3 0 110 6h-3" />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >Tailwind</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+                <path d="M12 3l9 16H3z" />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >Vercel</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-7 h-7"
+              >
+                <path d="M9 3h3a3 3 0 110 6H9V3z" />
+                <path d="M9 9h3v6H9a3 3 0 010-6z" />
+                <circle cx="10.5" cy="18" r="3" />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >Figma</span
+            >
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.284-.011-1.04-.017-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.089-.745.084-.729.084-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.896-.014 3.286 0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </div>
+            <span class="text-white/70 text-xs uppercase tracking-widest"
+              >GitHub</span
+            >
+          </div>
+        </div>
+</div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white/5 border-t border-white/10">
+      <div class="text-white px-6 py-24 lg:py-32 max-w-xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4">
+          Let's Talk
+        </h2>
+        <p class="text-white/80 text-center mb-10">
+          Tell us about your project and we'll get back to you shortly.
+        </p>
+        <form
+          id="contact-form"
+          onsubmit="onContactSubmit(event)"
+          class="flex flex-col gap-5"
+        >
+          <div class="flex flex-col gap-2">
+            <label
+              for="name"
+              class="text-sm uppercase tracking-widest text-white/80"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+              placeholder="Your name"
+              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white/60"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label
+              for="email"
+              class="text-sm uppercase tracking-widest text-white/80"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="name@mail.com"
+              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white/60"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label
+              for="note"
+              class="text-sm uppercase tracking-widest text-white/80"
+              >Note</label
+            >
+            <textarea
+              id="note"
+              name="note"
+              rows="5"
+              required
+              placeholder="Tell us about your project"
+              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white/60"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-indigo-800 mt-4 px-10 py-4 uppercase text-sm tracking-widest rounded-full hover:bg-indigo-900 hover:shadow-xl self-center"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
     <footer
-      class="flex text-white text-xs justify-center items-center pt-16 pb-4 fixed bottom-0 right-0 left-0"
+      class="text-white text-xs text-center py-8 bg-black/15 border-t border-white/10"
     >
-      <section><div>Senary LLC. &copy; copyright 2024</div></section>
+      <div>Senary LLC. &copy; copyright 2026</div>
     </footer>
+
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      class="fixed top-6 left-1/2 -translate-x-1/2 z-[60] w-[calc(100%-2rem)] max-w-sm -translate-y-4 opacity-0 pointer-events-none transition-all duration-300"
+    >
+      <div
+        class="relative bg-amber-100/95 backdrop-blur-md border border-amber-300 rounded-2xl shadow-2xl text-amber-900 p-4 pr-10"
+      >
+        <button
+          type="button"
+          onclick="hideToast()"
+          aria-label="Dismiss notification"
+          class="absolute top-2 right-3 text-amber-700 hover:text-amber-900 text-lg leading-none"
+        >
+          &times;
+        </button>
+        <p id="toast-message" class="text-sm"></p>
+      </div>
+    </div>
   </body>
 </html>
