@@ -70,7 +70,7 @@
       class="fixed top-0 right-0 left-0 z-50 transition-all duration-300"
     >
       <div
-        class="flex px-1 py-2 md:px-6 md:py-4 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
+        class="relative z-10 flex px-1 py-2 md:px-6 md:py-4 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
       >
         <svg
           id="ART"
@@ -108,29 +108,95 @@
             />
           </g>
         </svg>
-        <ul class="px-4 py-2 flex gap-4 md:gap-1 items-center ml-auto">
-          <li class="hidden md:block flex px-4 py-2 rounded-full">
+        <ul class="hidden md:flex px-4 py-2 gap-1 items-center ml-auto">
+          <li class="px-4 py-2 rounded-full">
             <a href="#" onclick="onAboutClick()">About</a>
           </li>
-          <li
-            class="flex mr-2 lg:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
-          >
+          <li class="px-4 py-2 rounded-full whitespace-nowrap">
             <a
               href="mailto:inquiry@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
             >
               Contact Us</a
             >
           </li>
-          <li
-            class="flex mr-2 md:mr-0 md:px-4 md:py-2 rounded-full whitespace-nowrap"
-          >
+          <li class="px-4 py-2 rounded-full whitespace-nowrap">
             <a href="https://buy.stripe.com/3cI9AVcsr88N3Q35LJ3sI00">
               Payment</a
             >
           </li>
         </ul>
+
+        <button
+          type="button"
+          id="menu-toggle"
+          onclick="toggleMobileMenu()"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="md:hidden ml-auto p-2"
+        >
+          <svg
+            id="menu-icon-open"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class="w-6 h-6 text-white"
+          >
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+          <svg
+            id="menu-icon-close"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class="hidden w-6 h-6 text-white"
+          >
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </svg>
+        </button>
       </div>
     </nav>
+
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden fixed inset-0 z-40 flex flex-col justify-center px-8 bg-gradient-to-br from-sky-600/95 to-indigo-800/95 backdrop-blur-lg opacity-0 -translate-y-4 transition-all duration-300 ease-out"
+    >
+      <ul class="flex flex-col text-white text-2xl">
+        <li>
+          <a
+            href="#"
+            onclick="onAboutClick(); closeMobileMenu();"
+            class="block py-4"
+            >About</a
+          >
+        </li>
+        <li><hr class="border-white/20" /></li>
+        <li>
+          <a
+            href="mailto:inquiry@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
+            onclick="closeMobileMenu()"
+            class="block py-4"
+            >Contact Us</a
+          >
+        </li>
+        <li><hr class="border-white/20" /></li>
+        <li>
+          <a
+            href="https://buy.stripe.com/3cI9AVcsr88N3Q35LJ3sI00"
+            onclick="closeMobileMenu()"
+            class="block py-4"
+            >Payment</a
+          >
+        </li>
+      </ul>
+    </div>
     <section
       id="hero"
       class="text-white h-[100vh] px-6 flex flex-col justify-center items-center text-center lg:text-left"
