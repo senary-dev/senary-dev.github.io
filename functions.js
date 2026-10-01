@@ -64,6 +64,11 @@ function onAboutClick() {
   aboutSection.scrollIntoView({ behavior: "smooth" });
 }
 
+function onContactClick() {
+  let contactSection = document.getElementById("contact");
+  contactSection.scrollIntoView({ behavior: "smooth" });
+}
+
 function onNavScroll() {
   let nav = document.querySelector("nav");
   if (!nav) return;
