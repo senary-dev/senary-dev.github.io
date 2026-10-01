@@ -70,7 +70,7 @@
       class="fixed top-0 right-0 left-0 z-50 transition-all duration-300"
     >
       <div
-        class="relative z-10 flex px-1 py-2 md:px-6 md:py-4 lg:max-w-7xl lg:m-auto lg:px-8 lg:py-4"
+        class="nav-inner relative z-10 flex items-center px-1 md:px-6 lg:max-w-7xl lg:m-auto lg:px-8"
       >
         <svg
           id="ART"
@@ -110,12 +110,12 @@
             />
           </g>
         </svg>
-        <ul class="hidden md:flex px-4 py-2 gap-1 items-center ml-auto">
+        <ul class="hidden md:flex px-4 -my-1 gap-1 items-center ml-auto">
           <li class="px-4 py-2 rounded-full">
-            <a href="#" onclick="onAboutClick(); return false;">About</a>
+            <a href="#" onclick="onClickSmooth('about'); return false;">About</a>
           </li>
           <li class="px-4 py-2 rounded-full whitespace-nowrap">
-            <a href="#" onclick="onContactClick(); return false;">
+            <a href="#" onclick="onClickSmooth('contact'); return false;">
               Contact Us</a
             >
           </li>
@@ -133,7 +133,7 @@
           aria-label="Toggle menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
-          class="md:hidden ml-auto p-2"
+          class="md:hidden ml-auto p-2 -my-2"
         >
           <svg
             id="menu-icon-open"
@@ -211,7 +211,8 @@
         class="bg-indigo-800 mt-8 px-10 py-4 uppercase text-sm lg:text-md tracking-widest rounded-full hover:bg-indigo-900 hover:shadow-xl"
       >
         <a
-          href="mailto:inquiry@senary.dev?subject=Hi! I'm inquiring about your services!&body=Hello Senary,%0D%0A%0D%0APlease contact me at (xxx) xxx - xxxx or name@mail.com to discuss my web development needs! I look forward to hearing from you!%0D%0A%0D%0ARegards,%0D%0A%0D%0A<YOUR NAME HERE>"
+          href="#contact"
+          onclick="onClickSmooth('contact'); return false;"
           >Inquire Here</a
         >
       </button>
@@ -230,7 +231,10 @@
           maintain what your business needs to grow online.
         </p>
         <!-- TODO: replace placeholder tooltip copy below with real, confirmed details -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          data-reveal-group
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           <div
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
@@ -400,12 +404,52 @@
                 stroke-linejoin="round"
                 class="w-6 h-6"
               >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 8v8" />
+                <path d="M13 8h3" />
+                <path d="M13 12h3" />
+                <path d="M13 16h3" />
+              </svg>
+            </div>
+            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+              Elementor
+              <div
+                role="tooltip"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+              >
+                Pages you can edit yourself, built to look right.
+                <div
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                ></div>
+              </div>
+            </h3>
+            <p class="text-white/80 text-sm">
+              Custom Elementor builds, templates, and fixes so your
+              WordPress pages stay easy to update.
+            </p>
+          </div>
+          <div
+            tabindex="0"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
                 <path d="M3 17l6-6 4 4 8-8" />
                 <path d="M15 7h6v6" />
               </svg>
             </div>
             <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
-              Basic SEO
+              On Page SEO
               <div
                 role="tooltip"
                 class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
@@ -429,6 +473,7 @@
           Built With
         </h3>
         <div
+          data-reveal-group
           class="grid grid-cols-2 sm:grid-cols-5 gap-x-6 gap-y-10 max-w-3xl mx-auto"
         >
           <div class="flex flex-col items-center gap-3">
