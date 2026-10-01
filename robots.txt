@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://senary.dev/sitemap.xml
