@@ -12,27 +12,38 @@ nav {
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1rem;
+  --nav-scale: 1;
+}
+
+.nav-inner {
+  padding-top: calc(0.5rem * var(--nav-scale));
+  padding-bottom: calc(0.5rem * var(--nav-scale));
 }
 
 nav svg {
   margin-left: 1rem;
-  height: 2rem;
-  width: 2rem;
+  height: calc(2rem * var(--nav-scale));
+  width: calc(2rem * var(--nav-scale));
 }
 
 @media (min-width: 768px) {
+  .nav-inner {
+    padding-top: calc(1rem * var(--nav-scale));
+    padding-bottom: calc(1rem * var(--nav-scale));
+  }
+
   nav svg {
     margin-left: 0;
-    height: 3rem;
-    width: 3rem;
+    height: calc(3rem * var(--nav-scale));
+    width: calc(3rem * var(--nav-scale));
   }
 }
 
 @media (min-width: 1200px) {
   nav svg {
     margin-left: 0;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: calc(3.5rem * var(--nav-scale));
+    width: calc(3.5rem * var(--nav-scale));
   }
 }
 
@@ -45,5 +56,26 @@ nav svg {
 
   #cta:hover {
     transition: all 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity 600ms ease-out,
+    transform 600ms ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
