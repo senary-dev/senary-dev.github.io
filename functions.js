@@ -64,6 +64,11 @@ function onAboutClick() {
   aboutSection.scrollIntoView({ behavior: "smooth" });
 }
 
+function onContactClick() {
+  let contactSection = document.getElementById("contact");
+  contactSection.scrollIntoView({ behavior: "smooth" });
+}
+
 function onNavScroll() {
   let nav = document.querySelector("nav");
   if (!nav) return;
@@ -82,6 +87,68 @@ function onNavScroll() {
 
 window.addEventListener("scroll", onNavScroll);
 window.addEventListener("load", onNavScroll);
+
+function toggleMobileMenu() {
+  let menu = document.getElementById("mobile-menu");
+  let toggle = document.getElementById("menu-toggle");
+  if (!menu || !toggle) return;
+
+  let isOpen = !menu.classList.contains("hidden");
+  if (isOpen) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+}
+
+let mobileMenuCloseTimeout;
+
+function openMobileMenu() {
+  let menu = document.getElementById("mobile-menu");
+  let toggle = document.getElementById("menu-toggle");
+  let iconOpen = document.getElementById("menu-icon-open");
+  let iconClose = document.getElementById("menu-icon-close");
+  if (!menu || !toggle) return;
+
+  clearTimeout(mobileMenuCloseTimeout);
+  menu.classList.remove("hidden");
+  // force a reflow so the transition runs from the closed state
+  void menu.offsetHeight;
+  menu.classList.remove("opacity-0", "-translate-y-4");
+  menu.classList.add("opacity-100", "translate-y-0");
+
+  toggle.setAttribute("aria-expanded", "true");
+  iconOpen.classList.add("hidden");
+  iconClose.classList.remove("hidden");
+  document.body.classList.add("overflow-hidden");
+}
+
+function closeMobileMenu() {
+  let menu = document.getElementById("mobile-menu");
+  let toggle = document.getElementById("menu-toggle");
+  let iconOpen = document.getElementById("menu-icon-open");
+  let iconClose = document.getElementById("menu-icon-close");
+  if (!menu || !toggle) return;
+
+  menu.classList.remove("opacity-100", "translate-y-0");
+  menu.classList.add("opacity-0", "-translate-y-4");
+
+  clearTimeout(mobileMenuCloseTimeout);
+  mobileMenuCloseTimeout = setTimeout(() => {
+    menu.classList.add("hidden");
+  }, 300);
+
+  toggle.setAttribute("aria-expanded", "false");
+  iconOpen.classList.remove("hidden");
+  iconClose.classList.add("hidden");
+  document.body.classList.remove("overflow-hidden");
+}
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {
+    closeMobileMenu();
+  }
+});
 
 let toastTimeout;
 
@@ -114,17 +181,15 @@ function onContactSubmit(event) {
   let email = document.getElementById("email").value;
   let note = document.getElementById("note").value;
 
-  let subject = encodeURIComponent(
-    "Hi! I'm inquiring about your services!"
-  );
+  let subject = encodeURIComponent("Hi! I'm inquiring about your services!");
   let body = encodeURIComponent(
-    `Hello Senary,\n\nName: ${name}\nEmail: ${email}\n\n${note}`
+    `Hello Senary,\n\nName: ${name}\nEmail: ${email}\n\n${note}`,
   );
   let mailtoUrl = `mailto:inquiry@senary.dev?subject=${subject}&body=${body}`;
 
   window.location.href = mailtoUrl;
 
   showToast(
-    `Opening your email client now. If nothing happens, click here to email us directly: <a href="${mailtoUrl}" class="underline font-semibold text-amber-900">inquiry@senary.dev</a>`
+    `Opening your email client now. If nothing happens, click here to email us directly: <a href="${mailtoUrl}" class="underline font-semibold text-amber-900">inquiry@senary.dev</a>`,
   );
 }
