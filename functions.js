@@ -59,14 +59,9 @@ function onClick() {
   // alert("Button Clicked Bro!!");
 }
 
-function onAboutClick() {
-  let aboutSection = document.getElementById("about");
-  aboutSection.scrollIntoView({ behavior: "smooth" });
-}
-
-function onContactClick() {
-  let contactSection = document.getElementById("contact");
-  contactSection.scrollIntoView({ behavior: "smooth" });
+function onClickSmooth(id) {
+  let section = document.getElementById(id);
+  section.scrollIntoView({ behavior: "smooth" });
 }
 
 function onNavScroll() {
@@ -83,6 +78,8 @@ function onNavScroll() {
   nav.style.boxShadow = `0 16px 48px -16px rgba(0,0,0,${(
     progress * 0.22
   ).toFixed(2)})`;
+
+  nav.style.setProperty("--nav-scale", (1 - progress * 0.2).toFixed(3));
 }
 
 window.addEventListener("scroll", onNavScroll);
@@ -193,3 +190,29 @@ function onContactSubmit(event) {
     `Opening your email client now. If nothing happens, click here to email us directly: <a href="${mailtoUrl}" class="underline font-semibold text-amber-900">inquiry@senary.dev</a>`,
   );
 }
+
+function revealOnScroll() {
+  let cards = document.querySelectorAll("[data-reveal-group] > *");
+  if (!cards.length || !("IntersectionObserver" in window)) return;
+
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries
+        .filter((entry) => entry.isIntersecting)
+        .forEach((entry, i) => {
+          // stagger cards that enter together so they cascade left to right
+          entry.target.style.transitionDelay = `${i * 120}ms`;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+    },
+    { threshold: 0.2 }
+  );
+
+  cards.forEach((card) => {
+    card.classList.add("reveal");
+    observer.observe(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", revealOnScroll);
