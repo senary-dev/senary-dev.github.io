@@ -65,7 +65,7 @@
     <script src="./functions.js"></script>
   </head>
 
-  <body class="min-h-screen bg-gradient-to-r from-sky-500 to-indigo-600">
+  <body class="min-h-screen bg-gradient-to-r from-sky-600 to-indigo-700">
     <nav
       class="fixed top-0 right-0 left-0 z-50 transition-all duration-300"
     >
@@ -166,7 +166,7 @@
 
     <div
       id="mobile-menu"
-      class="hidden md:hidden fixed inset-0 z-40 flex flex-col justify-center px-8 bg-gradient-to-br from-sky-600/95 to-indigo-800/95 backdrop-blur-lg opacity-0 -translate-y-4 transition-all duration-300 ease-out"
+      class="hidden md:hidden fixed inset-0 z-40 flex flex-col justify-center px-8 bg-gradient-to-br from-sky-700/95 to-indigo-800/95 backdrop-blur-lg opacity-0 -translate-y-4 transition-all duration-300 ease-out"
     >
       <ul class="flex flex-col text-white text-2xl">
         <li>
@@ -202,7 +202,7 @@
       class="text-white h-[100vh] px-6 flex flex-col justify-center items-center text-center lg:text-left"
     >
       <h1 class="pb-8 -mt-24 text-4xl lg:text-6xl font-bold text-center">
-        What's Your Next <br />Big App Idea?
+        What's Your Next <br /><span class="text-yellow-300">Big App Idea?</span>
       </h1>
       <p class="text-xl">Drop us a message to discuss</p>
       <button
@@ -223,7 +223,7 @@
 
     <section id="about" class="bg-black/15 border-t border-white/10">
       <div class="text-white px-6 py-24 lg:py-32 max-w-6xl mx-auto">
-        <h2 class="text-3xl lg:text-5xl font-bold text-center mb-4">
+        <h2 class="text-3xl lg:text-5xl font-bold text-center mb-4 after:block after:w-16 after:h-1 after:mx-auto after:mt-4 after:rounded-full after:bg-orange-400">
           What We Offer
         </h2>
         <p class="text-white/80 text-center max-w-2xl mx-auto mb-12 lg:mb-16">
@@ -237,7 +237,7 @@
         >
           <div
             tabindex="0"
-            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-orange-400 outline-none focus:ring-2 focus:ring-yellow-300"
           >
             <div
               class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
@@ -261,12 +261,12 @@
               Website Builds
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 Custom-coded, not templated — built to match your brand
                 exactly.
                 <div
-                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-indigo-950/95 rotate-45"
                 ></div>
               </div>
             </h3>
@@ -277,7 +277,7 @@
           </div>
           <div
             tabindex="0"
-            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-orange-400 outline-none focus:ring-2 focus:ring-yellow-300"
           >
             <div
               class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
@@ -300,11 +300,11 @@
               Web Applications
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 From MVP to full production app, built to scale.
                 <div
-                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-indigo-950/95 rotate-45"
                 ></div>
               </div>
             </h3>
@@ -315,7 +315,7 @@
           </div>
           <div
             tabindex="0"
-            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-orange-400 outline-none focus:ring-2 focus:ring-yellow-300"
           >
             <div
               class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
@@ -339,11 +339,11 @@
               Website Maintenance
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 We handle updates so you don't have to think about it.
                 <div
-                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-indigo-950/95 rotate-45"
                 ></div>
               </div>
             </h3>
@@ -354,7 +354,7 @@
           </div>
           <div
             tabindex="0"
-            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-orange-400 outline-none focus:ring-2 focus:ring-yellow-300"
           >
             <div
               class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
@@ -375,11 +375,11 @@
               WordPress Maintenance
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 Keep your site secure, fast, and up to date.
                 <div
-                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-indigo-950/95 rotate-45"
                 ></div>
               </div>
             </h3>
@@ -390,7 +390,7 @@
           </div>
           <div
             tabindex="0"
-            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-orange-400 outline-none focus:ring-2 focus:ring-yellow-300"
           >
             <div
               class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
@@ -415,11 +415,11 @@
               Elementor
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 Pages you can edit yourself, built to look right.
                 <div
-                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-indigo-950/95 rotate-45"
                 ></div>
               </div>
             </h3>
@@ -430,7 +430,7 @@
           </div>
           <div
             tabindex="0"
-            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 outline-none focus:ring-2 focus:ring-white/60"
+            class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-orange-400 outline-none focus:ring-2 focus:ring-yellow-300"
           >
             <div
               class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
@@ -452,11 +452,11 @@
               On Page SEO
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-slate-900/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 A solid foundation to help search engines find you.
                 <div
-                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-slate-900/95 rotate-45"
+                  class="absolute left-1/2 top-full -translate-x-1/2 -mt-1 w-2 h-2 bg-indigo-950/95 rotate-45"
                 ></div>
               </div>
             </h3>
@@ -645,7 +645,7 @@
 
     <section id="contact" class="bg-white/5 border-t border-white/10">
       <div class="text-white px-6 py-24 lg:py-32 max-w-xl mx-auto">
-        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4">
+        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4 after:block after:w-16 after:h-1 after:mx-auto after:mt-4 after:rounded-full after:bg-orange-400">
           Let's Talk
         </h2>
         <p class="text-white/80 text-center mb-10">
@@ -680,7 +680,7 @@
               autocomplete="name"
               required
               placeholder="Your name"
-              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white/60"
+              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-yellow-300"
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -696,7 +696,7 @@
               autocomplete="email"
               required
               placeholder="name@mail.com"
-              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white/60"
+              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-yellow-300"
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -711,7 +711,7 @@
               rows="5"
               required
               placeholder="Tell us about your project"
-              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white/60"
+              class="rounded-lg px-4 py-3 bg-white/10 border border-white/20 placeholder-white/50 text-white focus:outline-none focus:ring-2 focus:ring-yellow-300"
             ></textarea>
           </div>
           <button
@@ -729,7 +729,7 @@
     >
       <div>Senary LLC. &copy; copyright 2026</div>
       <div class="mt-2">
-        <a href="web-development-bay-area.html" class="underline text-white/70 hover:text-white"
+        <a href="web-development-bay-area.html" class="underline text-white/70 hover:text-yellow-300"
           >Serving the San Francisco Bay Area</a
         >
       </div>
