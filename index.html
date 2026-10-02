@@ -65,7 +65,7 @@
     <script src="./functions.js"></script>
   </head>
 
-  <body class="min-h-screen bg-gradient-to-r from-sky-600 to-indigo-700">
+  <body class="min-h-screen text-lg bg-gradient-to-r from-sky-600 to-indigo-700">
     <nav
       class="fixed top-0 right-0 left-0 z-50 transition-all duration-300"
     >
@@ -168,7 +168,7 @@
       id="mobile-menu"
       class="hidden md:hidden fixed inset-0 z-40 flex flex-col justify-center px-8 bg-gradient-to-br from-sky-700/95 to-indigo-800/95 backdrop-blur-lg opacity-0 -translate-y-4 transition-all duration-300 ease-out"
     >
-      <ul class="flex flex-col text-white text-2xl">
+      <ul class="flex flex-col text-white text-3xl">
         <li>
           <a
             href="#"
@@ -202,7 +202,7 @@
       class="text-white h-[100vh] px-6 flex flex-col justify-center items-center text-center lg:text-left"
     >
       <h1
-        class="pb-10 -mt-24 text-4xl sm:text-6xl lg:text-7xl font-bold text-center tracking-tight leading-[1.05]"
+        class="pb-10 -mt-24 text-[clamp(2.5rem,8vw,6rem)] font-bold text-center tracking-tight leading-[1.05]"
       >
         <span class="hero-word" style="--i: 0">What's</span>
         <span class="hero-word" style="--i: 1">Your</span>
@@ -222,14 +222,14 @@
           </svg>
         </span>
       </h1>
-      <p class="hero-fade text-xl" style="--d: 1300ms">
+      <p class="hero-fade text-xl lg:text-2xl" style="--d: 1300ms">
         Drop us a message to discuss
       </p>
       <button
         aria-label="inquire here"
         id="cta"
         style="--d: 1450ms"
-        class="hero-fade bg-orange-400 text-indigo-950 font-semibold mt-8 px-10 py-4 uppercase text-sm lg:text-md tracking-widest rounded-full hover:bg-orange-500 hover:shadow-xl"
+        class="hero-fade bg-orange-400 text-indigo-950 font-semibold mt-8 px-10 py-4 uppercase text-base tracking-widest rounded-full hover:bg-orange-500 hover:shadow-xl"
       >
         <a
           href="#contact"
@@ -244,10 +244,10 @@
 
     <section id="about" class="bg-black/15 border-t border-white/10">
       <div class="text-white px-6 py-24 lg:py-32 max-w-6xl mx-auto">
-        <h2 class="text-3xl lg:text-5xl font-bold text-center mb-4 after:block after:w-16 after:h-1 after:mx-auto after:mt-4 after:rounded-full after:bg-orange-400">
+        <h2 class="text-4xl lg:text-6xl tracking-tight font-bold text-center mb-4 after:block after:w-16 after:h-1 after:mx-auto after:mt-4 after:rounded-full after:bg-orange-400">
           What We Offer
         </h2>
-        <p class="text-white/80 text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+        <p class="text-white/80 lg:text-xl text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           From a brand new site to a full-scale web application, we build and
           maintain what your business needs to grow online.
         </p>
@@ -260,9 +260,10 @@
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-yellow-300 outline-none focus:ring-2 focus:ring-yellow-300"
           >
-            <div
-              class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
-            >
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center"
+              >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -277,12 +278,17 @@
                 <path d="M9 13l-2 2 2 2" />
                 <path d="M13 13l2 2-2 2" />
               </svg>
+              </div>
+              <span
+                class="rounded-full bg-indigo-900/50 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-yellow-300"
+                >Build</span
+              >
             </div>
-            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+            <h3 class="sm:relative inline-block text-xl lg:text-2xl font-semibold mb-2">
               Website Builds
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[260px] bg-indigo-950/95 text-white text-sm font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 Custom-coded, not templated — built to match your brand
                 exactly.
@@ -291,7 +297,7 @@
                 ></div>
               </div>
             </h3>
-            <p class="text-white/80 text-sm">
+            <p class="text-white/80 text-base lg:text-lg">
               Custom websites built from scratch and tailored to your brand,
               from first sketch to launch.
             </p>
@@ -300,9 +306,10 @@
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-yellow-300 outline-none focus:ring-2 focus:ring-yellow-300"
           >
-            <div
-              class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
-            >
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center"
+              >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -316,12 +323,17 @@
                 <path d="M3 13l9 5 9-5" />
                 <path d="M3 17l9 5 9-5" />
               </svg>
+              </div>
+              <span
+                class="rounded-full bg-indigo-900/50 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-yellow-300"
+                >Build</span
+              >
             </div>
-            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+            <h3 class="sm:relative inline-block text-xl lg:text-2xl font-semibold mb-2">
               Web Applications
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[260px] bg-indigo-950/95 text-white text-sm font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 From MVP to full production app, built to scale.
                 <div
@@ -329,7 +341,7 @@
                 ></div>
               </div>
             </h3>
-            <p class="text-white/80 text-sm">
+            <p class="text-white/80 text-base lg:text-lg">
               Full web applications built in the React / Next.js ecosystem,
               designed to scale with your product.
             </p>
@@ -338,9 +350,10 @@
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-yellow-300 outline-none focus:ring-2 focus:ring-yellow-300"
           >
-            <div
-              class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
-            >
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center"
+              >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -355,12 +368,17 @@
                 <path d="M4 9a8 8 0 0114-5" />
                 <path d="M20 15a8 8 0 01-14 5" />
               </svg>
+              </div>
+              <span
+                class="rounded-full bg-indigo-900/50 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-yellow-300"
+                >Maintain</span
+              >
             </div>
-            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+            <h3 class="sm:relative inline-block text-xl lg:text-2xl font-semibold mb-2">
               Website Maintenance
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[260px] bg-indigo-950/95 text-white text-sm font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 We handle updates so you don't have to think about it.
                 <div
@@ -368,7 +386,7 @@
                 ></div>
               </div>
             </h3>
-            <p class="text-white/80 text-sm">
+            <p class="text-white/80 text-base lg:text-lg">
               Ongoing updates, fixes, and monitoring to keep your site
               running smoothly.
             </p>
@@ -377,9 +395,10 @@
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-yellow-300 outline-none focus:ring-2 focus:ring-yellow-300"
           >
-            <div
-              class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
-            >
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center"
+              >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -391,12 +410,17 @@
               >
                 <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" />
               </svg>
+              </div>
+              <span
+                class="rounded-full bg-indigo-900/50 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-yellow-300"
+                >Maintain</span
+              >
             </div>
-            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+            <h3 class="sm:relative inline-block text-xl lg:text-2xl font-semibold mb-2">
               WordPress Maintenance
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[260px] bg-indigo-950/95 text-white text-sm font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 Keep your site secure, fast, and up to date.
                 <div
@@ -404,7 +428,7 @@
                 ></div>
               </div>
             </h3>
-            <p class="text-white/80 text-sm">
+            <p class="text-white/80 text-base lg:text-lg">
               Plugin and core updates, security patches, and backups for
               your WordPress site.
             </p>
@@ -413,9 +437,10 @@
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-yellow-300 outline-none focus:ring-2 focus:ring-yellow-300"
           >
-            <div
-              class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
-            >
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center"
+              >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -431,12 +456,17 @@
                 <path d="M13 12h3" />
                 <path d="M13 16h3" />
               </svg>
+              </div>
+              <span
+                class="rounded-full bg-indigo-900/50 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-yellow-300"
+                >Build</span
+              >
             </div>
-            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+            <h3 class="sm:relative inline-block text-xl lg:text-2xl font-semibold mb-2">
               Elementor
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[260px] bg-indigo-950/95 text-white text-sm font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 Pages you can edit yourself, built to look right.
                 <div
@@ -444,7 +474,7 @@
                 ></div>
               </div>
             </h3>
-            <p class="text-white/80 text-sm">
+            <p class="text-white/80 text-base lg:text-lg">
               Custom Elementor builds, templates, and fixes so your
               WordPress pages stay easy to update.
             </p>
@@ -453,9 +483,10 @@
             tabindex="0"
             class="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-colors duration-200 hover:border-yellow-300 outline-none focus:ring-2 focus:ring-yellow-300"
           >
-            <div
-              class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center mb-4"
-            >
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-yellow-300 text-indigo-950 flex items-center justify-center"
+              >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -468,12 +499,17 @@
                 <path d="M3 17l6-6 4 4 8-8" />
                 <path d="M15 7h6v6" />
               </svg>
+              </div>
+              <span
+                class="rounded-full bg-indigo-900/50 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-yellow-300"
+                >Grow</span
+              >
             </div>
-            <h3 class="sm:relative inline-block text-lg font-semibold mb-2">
+            <h3 class="sm:relative inline-block text-xl lg:text-2xl font-semibold mb-2">
               On Page SEO
               <div
                 role="tooltip"
-                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[220px] bg-indigo-950/95 text-white text-xs font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
+                class="absolute left-1/2 bottom-[calc(100%-5.5rem)] sm:bottom-full -translate-x-1/2 -translate-y-4 w-max max-w-[260px] bg-indigo-950/95 text-white text-sm font-normal rounded-lg px-3 py-2 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100 z-[55]"
               >
                 A solid foundation to help search engines find you.
                 <div
@@ -481,7 +517,7 @@
                 ></div>
               </div>
             </h3>
-            <p class="text-white/80 text-sm">
+            <p class="text-white/80 text-base lg:text-lg">
               On-page SEO fundamentals covering metadata, structure, and
               performance to help you get found.
             </p>
@@ -489,7 +525,7 @@
         </div>
 
         <h3
-          class="text-xl lg:text-2xl font-bold text-center mt-20 mb-10 lg:mt-24"
+          class="text-2xl lg:text-4xl tracking-tight font-bold text-center mt-20 mb-10 lg:mt-24"
         >
           Built With
         </h3>
@@ -503,7 +539,7 @@
             >
               <span class="text-base font-bold">JS</span>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >JavaScript</span
             >
           </div>
@@ -513,7 +549,7 @@
             >
               <span class="text-base font-bold">TS</span>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >TypeScript</span
             >
           </div>
@@ -534,7 +570,7 @@
                 <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >React</span
             >
           </div>
@@ -555,7 +591,7 @@
                 <path d="M12 14v7" />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >MongoDB</span
             >
           </div>
@@ -576,7 +612,7 @@
                 />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >Node</span
             >
           </div>
@@ -586,7 +622,7 @@
             >
               <span class="text-base font-bold">Ex</span>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >Express</span
             >
           </div>
@@ -607,7 +643,7 @@
                 <path d="M3 15h17a3 3 0 110 6h-3" />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >Tailwind</span
             >
           </div>
@@ -619,7 +655,7 @@
                 <path d="M12 3l9 16H3z" />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >Vercel</span
             >
           </div>
@@ -641,7 +677,7 @@
                 <circle cx="10.5" cy="18" r="3" />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >Figma</span
             >
           </div>
@@ -655,7 +691,7 @@
                 />
               </svg>
             </div>
-            <span class="text-white/70 text-xs uppercase tracking-widest"
+            <span class="text-white/70 text-sm uppercase tracking-widest"
               >GitHub</span
             >
           </div>
@@ -666,10 +702,10 @@
 
     <section id="contact" class="bg-white/5 border-t border-white/10">
       <div class="text-white px-6 py-24 lg:py-32 max-w-xl mx-auto">
-        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4 after:block after:w-16 after:h-1 after:mx-auto after:mt-4 after:rounded-full after:bg-orange-400">
+        <h2 class="text-4xl lg:text-6xl tracking-tight font-bold text-center mb-4 after:block after:w-16 after:h-1 after:mx-auto after:mt-4 after:rounded-full after:bg-orange-400">
           Let's Talk
         </h2>
-        <p class="text-white/80 text-center mb-10">
+        <p class="text-white/80 lg:text-xl text-center mb-10">
           Tell us about your project and we'll get back to you shortly.
         </p>
         <form
@@ -691,7 +727,7 @@
           <div class="flex flex-col gap-2">
             <label
               for="name"
-              class="text-sm uppercase tracking-widest text-white/80"
+              class="text-base uppercase tracking-widest text-white/80"
               >Name</label
             >
             <input
@@ -707,7 +743,7 @@
           <div class="flex flex-col gap-2">
             <label
               for="email"
-              class="text-sm uppercase tracking-widest text-white/80"
+              class="text-base uppercase tracking-widest text-white/80"
               >Email</label
             >
             <input
@@ -723,7 +759,7 @@
           <div class="flex flex-col gap-2">
             <label
               for="note"
-              class="text-sm uppercase tracking-widest text-white/80"
+              class="text-base uppercase tracking-widest text-white/80"
               >Note</label
             >
             <textarea
@@ -737,7 +773,7 @@
           </div>
           <button
             type="submit"
-            class="bg-orange-400 text-indigo-950 font-semibold mt-4 px-10 py-4 uppercase text-sm tracking-widest rounded-full hover:bg-orange-500 hover:shadow-xl self-center"
+            class="bg-orange-400 text-indigo-950 font-semibold mt-4 px-10 py-4 uppercase text-base tracking-widest rounded-full hover:bg-orange-500 hover:shadow-xl self-center"
           >
             Send Message
           </button>
@@ -746,7 +782,7 @@
     </section>
 
     <footer
-      class="text-white text-xs text-center py-8 bg-black/15 border-t border-white/10"
+      class="text-white text-sm text-center py-8 bg-black/15 border-t border-white/10"
     >
       <div>Senary LLC. &copy; copyright 2026</div>
       <div class="mt-2">
@@ -773,7 +809,7 @@
         >
           &times;
         </button>
-        <p id="toast-message" class="text-sm"></p>
+        <p id="toast-message" class="text-base"></p>
       </div>
     </div>
   </body>
