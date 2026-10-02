@@ -171,24 +171,35 @@ function hideToast() {
   clearTimeout(toastTimeout);
 }
 
-function onContactSubmit(event) {
+async function onContactSubmit(event) {
   event.preventDefault();
 
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let note = document.getElementById("note").value;
+  let form = event.target;
+  let button = form.querySelector("button[type=submit]");
+  let fallback = `You can also email us directly at <a href="mailto:inquiry@senary.dev" class="underline font-semibold text-amber-900">inquiry@senary.dev</a>.`;
 
-  let subject = encodeURIComponent("Hi! I'm inquiring about your services!");
-  let body = encodeURIComponent(
-    `Hello Senary,\n\nName: ${name}\nEmail: ${email}\n\n${note}`,
-  );
-  let mailtoUrl = `mailto:inquiry@senary.dev?subject=${subject}&body=${body}`;
+  button.disabled = true;
+  button.classList.add("opacity-60", "cursor-wait");
 
-  window.location.href = mailtoUrl;
+  try {
+    let response = await fetch("/contact.php", {
+      method: "POST",
+      body: new FormData(form),
+    });
+    let result = await response.json();
 
-  showToast(
-    `Opening your email client now. If nothing happens, click here to email us directly: <a href="${mailtoUrl}" class="underline font-semibold text-amber-900">inquiry@senary.dev</a>`,
-  );
+    if (result.ok) {
+      form.reset();
+      showToast(result.message);
+    } else {
+      showToast(`${result.message} ${fallback}`);
+    }
+  } catch (error) {
+    showToast(`Something went wrong sending your message. ${fallback}`);
+  } finally {
+    button.disabled = false;
+    button.classList.remove("opacity-60", "cursor-wait");
+  }
 }
 
 function revealOnScroll() {
