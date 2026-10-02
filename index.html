@@ -201,14 +201,35 @@
       id="hero"
       class="text-white h-[100vh] px-6 flex flex-col justify-center items-center text-center lg:text-left"
     >
-      <h1 class="pb-8 -mt-24 text-4xl lg:text-6xl font-bold text-center">
-        What's Your Next <br /><span class="text-yellow-300">Big App Idea?</span>
+      <h1
+        class="pb-10 -mt-24 text-4xl sm:text-6xl lg:text-7xl font-bold text-center tracking-tight leading-[1.05]"
+      >
+        <span class="hero-word" style="--i: 0">What's</span>
+        <span class="hero-word" style="--i: 1">Your</span>
+        <span class="hero-word" style="--i: 2">Next</span>
+        <br />
+        <span class="relative inline-block text-yellow-300">
+          <span class="hero-word" style="--i: 3">Big</span>
+          <span class="hero-word" style="--i: 4">App</span>
+          <span class="hero-word" style="--i: 5">Idea?</span>
+          <svg
+            class="hero-underline"
+            viewBox="0 0 300 20"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M4 15 C 70 6, 170 4, 296 9" pathLength="1" />
+          </svg>
+        </span>
       </h1>
-      <p class="text-xl">Drop us a message to discuss</p>
+      <p class="hero-fade text-xl" style="--d: 1300ms">
+        Drop us a message to discuss
+      </p>
       <button
         aria-label="inquire here"
         id="cta"
-        class="bg-orange-400 text-indigo-950 font-semibold mt-8 px-10 py-4 uppercase text-sm lg:text-md tracking-widest rounded-full hover:bg-orange-500 hover:shadow-xl"
+        style="--d: 1450ms"
+        class="hero-fade bg-orange-400 text-indigo-950 font-semibold mt-8 px-10 py-4 uppercase text-sm lg:text-md tracking-widest rounded-full hover:bg-orange-500 hover:shadow-xl"
       >
         <a
           href="#contact"
